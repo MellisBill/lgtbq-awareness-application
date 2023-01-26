@@ -1,3 +1,6 @@
+$main-colour: #1e81b0;
+$main-accent: #eeeee4;
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +10,46 @@
 
 p {
     white-space: pre-line;
-    width: 50%;
-    margin: 2rem auto;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        text-transform: capitalize;
+    }
+}
+
+
+nav {
+    height: 6rem;
+    background: $main-colour;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 6rem;
+    color: $main-accent;
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-left: auto;
+
+        .nav-link {
+            color: inherit;
+            transition: all 0.1s ease-in-out;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+                color: lighten($main-accent, 20%);
+            }
+        }
+    }
 }
