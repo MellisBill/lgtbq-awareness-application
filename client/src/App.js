@@ -1,12 +1,20 @@
-import { poem } from './data/poem';
 import './styles/app.css'
+import { Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home'
+import { Links } from './pages/Links'
+import { Posts } from './pages/Posts'
+import { Nav } from './components/Nav';
 
 function App() {
-  return (
-    <div className="App">
-      <p>{poem}</p>
-    </div>
-  );
+  return <>
+    <Nav/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/links" element={<Links/>}/>
+      <Route path="/links" element={<Links/>}/>
+      <Route path="/posts" element={<Posts/>}/>
+    </Routes>
+  </>
 }
 
 export default App;

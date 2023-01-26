@@ -8,7 +8,61 @@
 
 p {
   white-space: pre-line;
-  width: 50%;
-  margin: 2rem auto;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  text-transform: capitalize;
+}
+
+nav {
+  height: 6rem;
+  background: #1e81b0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 6rem;
+  color: #eeeee4;
+}
+
+nav h1 {
+  font-size: 2rem;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+nav ul .nav-link {
+  color: inherit;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
+}
+
+nav ul .nav-link:hover {
+  cursor: pointer;
+  color: white;
 }
 /*# sourceMappingURL=app.css.map */
