@@ -20,7 +20,12 @@ ul li {
 
 nav {
   height: 6rem;
-  background: #1e81b0;
+  background: linear-gradient(
+    90deg,
+    rgba(227, 25, 55, 1) 0%,
+    rgba(168, 36, 101, 1) 60%,
+    rgba(82, 54, 171, 1) 100%
+  );
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
