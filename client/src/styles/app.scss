@@ -53,3 +53,12 @@ nav {
         }
     }
 }
+
+.search-input {
+
+    border: none;
+    border-left: solid 1px grey;
+    &:focus {
+        outline: none;
+    }
+}

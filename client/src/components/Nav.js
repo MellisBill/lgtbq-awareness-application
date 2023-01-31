@@ -9,7 +9,7 @@ export const Nav = () => {
         <ul>
             {menu_items.map((item) => {
                 return (
-                <li>
+                <li key={item.value}>
                     <Link className='nav-link' to={item.value}>{item.label}</Link>
                 </li>)
             })}
