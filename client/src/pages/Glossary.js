@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import { definitions } from '../data/definitions'
+import '../styles/app.css'
 
 export const Glossary = () => {
 
