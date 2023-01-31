@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import { definitions } from '../data/definitions'
+import { strings } from '../data/strings'
 import '../styles/app.css'
 
 export const Glossary = () => {
@@ -12,24 +13,29 @@ export const Glossary = () => {
         })
     }, [searchTerm])
 
-  return (
-    <form>
-        <input  
-            type="text"
-            className='search-input'
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <ul>
-        {
-            filteredDefinitions.map((definition) => {
-                return <li key={definition.id}>
-                    <h2>{definition.title}</h2>
-                    <p>{definition.description}</p>
-                </li>
-            })
-        }
+  return (<>
+    <main>
+        <form className='search-form'>
+            <input  
+                type="text"
+                className='search-input'
+                value={searchTerm}
+                placeholder={strings.searchPlaceholder}
+                onChange={(e) => setSearchTerm(e.target.value)}
+            />
+        </form>
+        <ul className='definitions-list'>
+            {
+                filteredDefinitions.map((definition) => {
+                    return <li key={definition.id}>
+                        <h2>{definition.title}</h2>
+                        <p>{definition.description}</p>
+                    </li>
+                })
+            }
         </ul>
-    </form>
+        { filteredDefinitions.length === 0 && <p>No results found</p>}
+    </main>
+    </>
   )
 }
