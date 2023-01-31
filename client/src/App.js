@@ -4,6 +4,7 @@ import { Home } from './pages/Home'
 import { Links } from './pages/Links'
 import { Posts } from './pages/Posts'
 import { Nav } from './components/Nav';
+import { Glossary } from './pages/Glossary'
 
 function App() {
   return <>
@@ -13,6 +14,7 @@ function App() {
       <Route path="/links" element={<Links/>}/>
       <Route path="/links" element={<Links/>}/>
       <Route path="/posts" element={<Posts/>}/>
+      <Route path="/glossary" element={<Glossary/>}/>
     </Routes>
   </>
 }
