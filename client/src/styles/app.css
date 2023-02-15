@@ -12,10 +12,12 @@ p {
 
 ul {
   list-style: none;
+  padding: 5%;
 }
 
 ul li {
   text-transform: capitalize;
+  padding: 5%;
 }
 
 main {
