@@ -11,7 +11,7 @@ $cgi-gradient: linear-gradient(
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 p {
@@ -33,7 +33,7 @@ main {
 
 nav {
     height: 6rem;
-    background: $cgi-gradient;
+    background: white;
     display: flex;
     flex-direction: row;
     align-items: center;

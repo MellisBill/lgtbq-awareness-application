@@ -3,6 +3,6 @@ import { MenuItem } from "../types/types"
 export const  menu_items : MenuItem[]  = [
     { label: 'home', value: '/' },
     { label: 'links', value: '/links' },
-    { label: 'posts', value: '/posts' },
+    { label: 'Q&A', value: '/question-and-answer' },
     { label: 'glossary', value: '/glossary' },
 ]
