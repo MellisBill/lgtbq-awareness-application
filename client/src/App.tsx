@@ -5,6 +5,7 @@ import { Links } from './pages/Links'
 import { Posts } from './pages/Posts'
 import { Nav } from './components/Nav';
 import { Glossary } from './pages/Glossary'
+import React from 'react'
 
 function App() {
   return <>
