@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Source Sans Pro'
+);
+
+$font-family: 'Source Sans Pro', sans-serif;
+
 $main-colour: #1e81b0;
 $main-accent: #eeeee4;
-$cgi-gradient: linear-gradient(
-    90deg,
-    rgba(227, 25, 55, 1) 0%,
-    rgba(168, 36, 101, 1) 60%,
-    rgba(82, 54, 171, 1) 100%
-  );
+$cgi-gradient: linear-gradient(90deg,
+        rgba(227, 25, 55, 1) 0%,
+        rgba(168, 36, 101, 1) 60%,
+        rgba(82, 54, 171, 1) 100%);
+
+$breakpoint: 768px;
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: $font-family
 }
 
 p {
@@ -26,42 +30,53 @@ ul {
     }
 }
 
-main {
-    padding: 2rem;
-}
-
-
-nav {
-    height: 6rem;
-    background: white;
-    display: flex;
-    flex-direction: row;
+.navbar {
     align-items: center;
-    padding: 0 6rem;
-    color: $main-accent;
-
-    h1 {
-        font-size: 2rem;
+    background: white;
+    filter: drop-shadow(0 1px 4px #B7B7B7);
+    @media (max-width: 786px) {
+        display: block
     }
-
-    ul {
+    .navbar-content {
+        margin: auto;
+        width: 70%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-left: auto;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
 
-        .nav-link {
-            color: inherit;
-            transition: all 0.1s ease-in-out;
-            text-decoration: none;
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            font-weight: bold;
+            padding-left: 32px;
 
-            &:hover {
-                cursor: pointer;
-                color: lighten($main-accent, 20%);
+            .nav-link {
+                color: inherit;
+                transition: all 0.1s ease-in-out;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    color: lighten($main-accent, 20%);
+                }
             }
         }
+
+        .ask-question {
+            width: 150px;
+            height: 40px;
+            background: $cgi-gradient;
+            border-radius: 20px;
+            margin-left: auto;
+            outline: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 2rem;
+        }
     }
+
 }
 
 .search-form {
@@ -76,6 +91,7 @@ nav {
         border-left: solid 2px grey;
         padding: 0.5rem;
         width: 30rem;
+
         &:focus {
             outline: none;
         }
@@ -85,5 +101,7 @@ nav {
 .definitions-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    width: 50%;
+    margin: auto;
 }

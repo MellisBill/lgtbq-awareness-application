@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useMemo } from 'react'
 import { definitions } from '../data/definitions'
 import { strings } from '../data/strings'
-import '../styles/app.css'
+import '../styles/app.scss'
 
 export const Glossary = () => {
 
