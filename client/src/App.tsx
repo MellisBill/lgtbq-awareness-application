@@ -6,9 +6,11 @@ import { Posts } from './pages/Posts'
 import { Nav } from './components/Nav';
 import { Glossary } from './pages/Glossary'
 import React from 'react'
+import { Modal } from './components/Modal'
+import { FormAcceptModal } from './components/FormAcceptModal';
 
 function App() {
-  return (
+  return <>
   <div className='App'>
     <Nav />
     <Routes>
@@ -19,8 +21,8 @@ function App() {
       <Route path="/glossary" element={<Glossary />} />
     </Routes>
   </div>
-  )
-
+  <Modal></Modal>
+</>
 }
 
 export default App;
