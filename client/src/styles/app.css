@@ -119,7 +119,7 @@ ul li {
   outline: none;
 }
 
-.accept-check-container {
+.check-box-container {
   display: flex;
   flex-direction: row;
   align-items: center;
