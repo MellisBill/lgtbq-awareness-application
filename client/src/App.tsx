@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return <>
-    <div className='App'>
+    <div className='App' style={{overflow: modalOpen ? 'hidden' : 'auto'}}>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -34,13 +34,13 @@ function App() {
       </Routes>
     </div>
 
-  {/* T&Cs modal */}
-  {
-    modalOpen && 
-      <Modal>
-        <FormAcceptModal content={userTerms} storageKey="user"/>
-      </Modal>
-  }
+    {
+      /* T&Cs modal */
+      modalOpen && 
+        <Modal>
+          <FormAcceptModal content={userTerms} storageKey="user"/>
+        </Modal>
+    }
 </>
 }
 

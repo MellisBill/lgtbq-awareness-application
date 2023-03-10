@@ -6,6 +6,7 @@ export const FormAcceptModal = (props: any) => {
   const { setOpen, content, storageKey } = props;
   const [accepted, setAccepted] = useState(false);
 
+  // On click for continue button - save in storage that user has accepted T&Cs and close modal
   const onContinue = () => {
     if (accepted) {
       localStorage.setItem(`accepted-${storageKey}`, 'true');

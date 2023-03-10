@@ -1,4 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react'
+import ReactDom from 'react-dom'
 import { useState, useEffect } from 'react';
 import { FormAcceptModal } from './FormAcceptModal';
 
@@ -18,13 +19,19 @@ export const Modal = ({children, storageKey}: any) => {
         return child;
       });
     
-    return <>
-        {open && <div>
-            <div className='modal-backdrop'/>
-            <div className='modal-content'>
-                {childrenWithProps}
-            </div>
-        </div>}
-    </>  
+    // target element to render modal
+    const modalPortal: HTMLElement = document.getElementById('portal')!;
+    
+    return ReactDom.createPortal(
+        <>
+            {open && <div>
+                <div className='modal-backdrop'/>
+                <div className='modal-content'>
+                    {childrenWithProps}
+                </div>
+            </div>}
+        </>,
+        modalPortal
+    ) 
 }
 
