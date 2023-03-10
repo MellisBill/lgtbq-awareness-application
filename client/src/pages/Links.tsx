@@ -1,7 +1,9 @@
 import React from 'react'
+import { EmbeddedForm } from '../components/MSForm'
+import { url } from '../data/question-form';
 
 export const Links = () => {
   return (
-    <h1>Links</h1>
+    <EmbeddedForm url={url}/>
   )
 }
