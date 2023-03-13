@@ -12,69 +12,48 @@ p {
 ul {
   list-style: none;
 }
-
 ul li {
   text-transform: capitalize;
 }
 
 .navbar {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background: white;
-  -webkit-filter: drop-shadow(0 1px 4px #B7B7B7);
-          filter: drop-shadow(0 1px 4px #B7B7B7);
+  filter: drop-shadow(0 1px 4px #B7B7B7);
 }
-
 @media (max-width: 786px) {
   .navbar {
     display: block;
   }
 }
-
 .navbar .navbar-content {
   margin: auto;
   width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
 .navbar .navbar-content .nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 32px;
   font-weight: bold;
   padding-left: 32px;
 }
-
 .navbar .navbar-content .nav-links .nav-link {
   color: inherit;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   text-decoration: none;
 }
-
 .navbar .navbar-content .nav-links .nav-link:hover {
   cursor: pointer;
   color: white;
 }
-
 .navbar .navbar-content .ask-question {
   width: 150px;
   height: 40px;
-  background: -webkit-gradient(linear, left top, right top, from(#e31937), color-stop(60%, #a82465), to(#5236ab));
-  background: linear-gradient(90deg, #e31937 0%, #a82465 60%, #5236ab 100%);
+  background: linear-gradient(90deg, rgb(227, 25, 55) 0%, rgb(168, 36, 101) 60%, rgb(82, 54, 171) 100%);
   border-radius: 20px;
   margin-left: auto;
   outline: none;
@@ -84,40 +63,53 @@ ul li {
 }
 
 .search-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  flex-direction: row;
+  justify-content: left;
   margin-bottom: 2rem;
 }
-
 .search-form input {
   border: none;
   border-left: solid 2px grey;
   padding: 0.5rem;
   width: 30rem;
 }
-
 .search-form input:focus {
   outline: none;
 }
 
 .definitions-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 2rem;
   width: 50%;
   margin: auto;
 }
-/*# sourceMappingURL=app.css.map */
+
+.toggle-container {
+  width: 2.5rem;
+  height: 1.2rem;
+  border: solid 2px grey;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-container-selected {
+  border: solid 2px rgb(227, 25, 55) !important;
+}
+
+.toggle-inner {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  margin: 0.2rem;
+  background: grey;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-inner-selected {
+  transform: translateX(1.2rem);
+  background: rgb(227, 25, 55) 0%;
+}/*# sourceMappingURL=app.css.map */

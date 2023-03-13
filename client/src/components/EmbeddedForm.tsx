@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const EmbeddedForm = ({url}: {url: string}) => {
+export const EmbeddedForm = ({url, title}: {url: string, title: string}) => {
 
     const style = {
         "border": "none", 
@@ -13,7 +13,9 @@ export const EmbeddedForm = ({url}: {url: string}) => {
     return (
         <iframe 
             src={url}  
-            style={style} > 
+            style={style}
+            title={title} 
+        > 
         </iframe>
     )
 }
