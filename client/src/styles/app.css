@@ -94,6 +94,7 @@ ul li {
   display: flex;
   align-items: center;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .toggle-container-selected {
