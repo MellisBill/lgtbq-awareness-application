@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Toggle } from '../components/Toggle'
+import React from 'react'
 
 export const Home = () => {
 
