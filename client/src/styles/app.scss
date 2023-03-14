@@ -10,6 +10,8 @@ $cgi-gradient: linear-gradient(90deg,
         rgba(168, 36, 101, 1) 60%,
         rgba(82, 54, 171, 1) 100%);
 
+$cgi-red: rgba(227, 25, 55, 1);
+
 $breakpoint: 768px;
 
 * {
@@ -135,4 +137,73 @@ ul {
 .toggle-inner-selected {
     transform: translateX(1.2rem);
     background: rgba(227, 25, 55, 1) 0%;
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.6);
+}
+
+.modal-content {
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 10px;
+
+    .terms-content {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        height: 15rem;
+        overflow-y: auto;
+    }
+}
+
+.button-no-style {
+    background: none;
+    border: none;
+    :focus {
+        outline: none;
+    }
+}
+
+.check-box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.accept-terms-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    .continue {
+        width: fit-content;
+        background: $cgi-red;
+        color: white;
+        border: none;
+        padding: 0.3rem;
+        border-radius: 5px;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background: darken($color: $cgi-red, $amount: 5%);
+        }
+
+        &:disabled {
+            background: grey;
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
 }

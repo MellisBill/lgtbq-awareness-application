@@ -113,4 +113,71 @@ ul li {
 .toggle-inner-selected {
   transform: translateX(1.2rem);
   background: rgb(227, 25, 55) 0%;
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.modal-content .terms-content {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  height: 15rem;
+  overflow-y: auto;
+}
+
+.button-no-style {
+  background: none;
+  border: none;
+}
+.button-no-style :focus {
+  outline: none;
+}
+
+.check-box-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.accept-terms-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.accept-terms-form .continue {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: rgb(227, 25, 55);
+  color: white;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+}
+.accept-terms-form .continue:hover {
+  cursor: pointer;
+  background: #cc1631;
+}
+.accept-terms-form .continue:disabled {
+  background: grey;
+}
+.accept-terms-form .continue:disabled:hover {
+  cursor: default;
+
 }/*# sourceMappingURL=app.css.map */
