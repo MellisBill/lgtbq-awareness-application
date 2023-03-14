@@ -113,6 +113,7 @@ ul li {
 .toggle-inner-selected {
   transform: translateX(1.2rem);
   background: rgb(227, 25, 55) 0%;
+}
 
 .modal-backdrop {
   position: fixed;
@@ -179,5 +180,4 @@ ul li {
 }
 .accept-terms-form .continue:disabled:hover {
   cursor: default;
-
 }/*# sourceMappingURL=app.css.map */
