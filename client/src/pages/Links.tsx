@@ -4,6 +4,6 @@ import { url } from '../data/question-form';
 
 export const Links = () => {
   return (
-    <EmbeddedForm url={url} title={'User T&Cs'}/>
+    <h1>Links</h1>
   )
 }
