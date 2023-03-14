@@ -86,6 +86,34 @@ ul li {
   margin: auto;
 }
 
+.toggle-container {
+  width: 2.5rem;
+  height: 1.2rem;
+  border: solid 2px grey;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.toggle-container-selected {
+  border: solid 2px rgb(227, 25, 55) !important;
+}
+
+.toggle-inner {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  margin: 0.2rem;
+  background: grey;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-inner-selected {
+  transform: translateX(1.2rem);
+  background: rgb(227, 25, 55) 0%;
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -166,4 +194,5 @@ ul li {
   margin: 2rem 0 2rem 10%;
   font-weight: 300;
   font-size: 2rem;
+
 }/*# sourceMappingURL=app.css.map */
