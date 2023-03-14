@@ -7,7 +7,7 @@ import { Glossary } from './pages/Glossary'
 import { Modal } from './components/Modal'
 import { FormAcceptModal } from './components/FormAcceptModal';
 import React, {useEffect, useState} from 'react'
-import './styles/app.scss'
+import './styles/app.css'
 import { userTerms } from './data/user-terms';
 
 function App() {

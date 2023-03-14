@@ -32,6 +32,8 @@ ul {
     }
 }
 
+// Nav bar 
+
 .navbar {
     align-items: center;
     background: white;
@@ -81,6 +83,8 @@ ul {
 
 }
 
+// Search definitions
+
 .search-form {
 
     display: flex;
@@ -107,6 +111,9 @@ ul {
     width: 50%;
     margin: auto;
 }
+
+
+// Modal 
 
 .modal-backdrop {
     position: fixed;
@@ -175,5 +182,23 @@ ul {
                 cursor: default;
             }
         }
+    }
+}
+
+// Page heading
+
+.page-heading {
+    width: 100%;
+    background: $cgi-gradient;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1 {
+        margin-left: 10%;
+        margin: 2rem 0 2rem 10%;
+        font-weight: 300;
+        font-size: 2rem;
     }
 }

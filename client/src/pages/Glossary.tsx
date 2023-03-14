@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useMemo } from 'react'
 import { definitions } from '../data/definitions'
 import { strings } from '../data/strings'
+import { PageHeading } from '../components/PageHeading'
 import '../styles/app.scss'
 
 export const Glossary = () => {
@@ -16,6 +17,7 @@ export const Glossary = () => {
 
   return (<>
     <main>
+        <PageHeading title='Glossary'/>
         <form className='search-form'>
             <input  
                 type="text"

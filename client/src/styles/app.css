@@ -151,4 +151,19 @@ ul li {
 }
 .accept-terms-form .continue:disabled:hover {
   cursor: default;
+}
+
+.page-heading {
+  width: 100%;
+  background: linear-gradient(90deg, rgb(227, 25, 55) 0%, rgb(168, 36, 101) 60%, rgb(82, 54, 171) 100%);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.page-heading h1 {
+  margin-left: 10%;
+  margin: 2rem 0 2rem 10%;
+  font-weight: 300;
+  font-size: 2rem;
 }/*# sourceMappingURL=app.css.map */

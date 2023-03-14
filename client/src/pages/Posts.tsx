@@ -1,7 +1,8 @@
 import React from 'react'
+import { PageHeading } from '../components/PageHeading'
 
 export const Posts = () => {
   return (
-    <h1>Posts</h1>
+    <PageHeading title='Posts'/>
   )
 }
