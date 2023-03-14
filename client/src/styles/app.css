@@ -113,6 +113,7 @@ ul li {
 .toggle-inner-selected {
   transform: translateX(1.2rem);
   background: rgb(227, 25, 55) 0%;
+}
 
 .modal-backdrop {
   position: fixed;
@@ -194,5 +195,4 @@ ul li {
   margin: 2rem 0 2rem 10%;
   font-weight: 300;
   font-size: 2rem;
-
 }/*# sourceMappingURL=app.css.map */
