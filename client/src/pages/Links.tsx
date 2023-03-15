@@ -1,7 +1,8 @@
 import React from 'react'
+import { PageHeading } from '../components/PageHeading'
 
 export const Links = () => {
   return (
-    <h1>Links</h1>
+    <PageHeading title='Links'/>
   )
 }

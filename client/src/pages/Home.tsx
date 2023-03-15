@@ -1,8 +1,8 @@
 import React from 'react'
+import { PageHeading } from '../components/PageHeading'
 
 export const Home = () => {
-
-  return <>
-      <h1>Home</h1>
-    </>
+  return (
+    <PageHeading title='Home'/>
+  )
 }
