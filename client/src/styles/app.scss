@@ -232,3 +232,106 @@ ul {
         font-size: 2rem;
     }
 }
+
+// Carousel
+
+.carousel-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    white-space: nowrap;
+    position: relative;
+
+    .carousel-inner {
+        min-width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        transition: all 1s ease-in-out;
+    }
+
+    .carousel-item {
+        width: 100%;
+        display: inline-flex;
+    }
+}
+
+.carousel-dot-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+
+    div {
+        width: 0.5rem;
+        height: 0.5rem;
+        background: grey;
+        border-radius: 50%;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .current-dot {
+        width: 0.75rem;
+        height: 0.75rem;
+        background: $cgi-red;
+    }
+}
+
+.carousel-button-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+
+    > button:nth-child(1) {
+        margin-left: 3rem;
+    }
+    > button:nth-child(2) {
+        margin-right: 3rem;
+        margin-left: auto;
+    }
+
+    button {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: none;
+        background: rgba($color: #000000, $alpha: 0.3);
+        border-radius: 50%;
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+        color: rgba($color: white, $alpha: 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background: rgba($color: #000000, $alpha: 0.5);
+            color: rgba($color: white, $alpha: 0.8);
+        }
+    }
+}
+
+.red {
+    padding: 2rem;
+    color: white;
+    font-size: 2rem;
+    background: red;
+}
+.green {
+    padding: 2rem;
+    color: white;
+    font-size: 2rem;
+    background: green;
+}
+.blue {
+    padding: 2rem;
+    color: white;
+    font-size: 2rem;
+    background: blue;
+}

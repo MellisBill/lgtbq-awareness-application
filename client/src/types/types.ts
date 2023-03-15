@@ -2,14 +2,24 @@
 export type MenuItem = {
     label: string,
     value: string,
-}
+};
 
 export type Definition = {
     id: number, 
     title: string, 
     description: string,
-}
+};
 
 export type StringDict = {
     [key:string] : string,
-}
+};
+
+export type CarouselProps = {
+    height?: string,
+    children: any,
+};
+
+export type CarouselItemProps = {
+    height?: string,
+    children?: any,
+};
