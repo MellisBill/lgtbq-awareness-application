@@ -17,6 +17,8 @@ export type StringDict = {
 export type CarouselProps = {
     height?: string,
     children: any,
+    auto?: boolean,
+    interval?: number,
 };
 
 export type CarouselItemProps = {

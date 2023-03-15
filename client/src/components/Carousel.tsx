@@ -1,24 +1,38 @@
-import React, { ReactElement, Children, useState, useRef, useMemo } from 'react'
+import React, { ReactElement, Children, useState, useRef, useMemo, useEffect } from 'react'
 import { CarouselProps } from '../types/types'
 
 const defaultProps: CarouselProps = {
     height: '20rem',
-    children: null
+    children: null,
+    auto: false,
+    interval: 0,
 }
 
-export const Carousel = ({height, children}: CarouselProps) => {
+export const Carousel = ({height, children, auto, interval}: CarouselProps) => {
 
     const containerRef = useRef<HTMLDivElement>(null);
     const [index, setIndex] = useState<number>(0)
 
+    // Timer to increment the cound every <interval> seconds
+    useEffect(() => {
+        if (!auto) return;
+        const timer = setInterval(() => handleInc(), interval);
+        return () => {
+          clearInterval(timer);
+        };
+      }, [index]);
+
+    // styles for carousel container
     const carouselStyles = {
         height: height,
     }
 
+    // Increment index; this moves the carousel on by one; wraps around to 0
     const handleInc = () => {
         setIndex((index + 1) % Children.count(children));
     }
 
+    // Decremenet index; this moves the carousel back by one; wraps around to 0
     const handleDec = () => {
         setIndex(prev => {
             var next = (prev - 1) % Children.count(children);
@@ -28,6 +42,7 @@ export const Carousel = ({height, children}: CarouselProps) => {
         })
     }
 
+    // Styles that sets the offset of the children of the carousel. This makes the children move left & right
     const innerStyles = useMemo(() => {
         if (containerRef.current == null) {
             return {};
