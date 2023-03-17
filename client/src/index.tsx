@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { credentials } from './config/googleCreds';
 
 
 const root = ReactDOM.createRoot(
@@ -9,11 +11,13 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+  <GoogleOAuthProvider clientId={credentials.web.client_id}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </GoogleOAuthProvider>
 )
 
 
