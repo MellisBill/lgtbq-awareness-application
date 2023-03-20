@@ -9,7 +9,7 @@ export const credentials = {
         "javascript_origins":["http://localhost:3000"]
     }
 }
-export const scopes: string = 'https://www.googleapis.com/auth/drive' + 
+export const scopes: string = 'https://www.googleapis.com/auth/drive ' + 
                         'https://www.googleapis.com/auth/drive.file ' + 
                         'https://www.googleapis.com/auth/forms.body ' + 
                         'https://www.googleapis.com/auth/drive.readonly ' + 
