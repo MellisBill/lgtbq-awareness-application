@@ -2,6 +2,7 @@ import React, { useState }  from 'react'
 import { useGoogleLogin } from '@react-oauth/google';
 import { scopes } from '../config/google-oauth';
 import { getFormResponses } from '../lib/google-forms';
+import { PageHeading } from '../components/PageHeading';
 
 export const QandA = () => {
 
@@ -15,7 +16,7 @@ export const QandA = () => {
         scope: scopes
     });
 
-    return (
-        <div>QandA</div>
-    )
+    return <>
+        <PageHeading title='Question and Answer'/>
+    </>
 }

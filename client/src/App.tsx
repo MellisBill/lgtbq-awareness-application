@@ -9,6 +9,7 @@ import { FormAcceptModal } from './components/FormAcceptModal';
 import React, {useEffect, useState} from 'react'
 import './styles/app.css'
 import { userTerms } from './data/user-terms';
+import { QandA } from './pages/QandA';
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/links" element={<Links />} />
-        <Route path="/links" element={<Links />} />
+        <Route path='/question-and-answer' element={<QandA/>} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/glossary" element={<Glossary />} />
       </Routes>
