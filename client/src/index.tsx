@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import { credentials } from './config/googleCreds';
+import { credentials } from './config/google-oauth';
 
 
 const root = ReactDOM.createRoot(
