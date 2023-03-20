@@ -8,7 +8,7 @@ export const Nav = () => {
     <nav className='navbar'>
       <div className='navbar-content'>
 
-         <img src={Logo} alt="" />
+        <img src={Logo} alt="" />
         <ul className='nav-links'>
           {menu_items.map((item) => {
             return (
