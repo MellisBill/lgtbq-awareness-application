@@ -18,7 +18,7 @@ export const Nav = () => {
           })}
         </ul>
           <button className='ask-question'>
-          Ask a question
+            <Link style={{color: 'white', textDecoration: 'none'}} to='/question-and-answer'>Ask a question</Link>
           </button>
       </div>
        

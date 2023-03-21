@@ -60,6 +60,9 @@ ul li {
   color: white;
   font-weight: bold;
   margin-right: 2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 6px 6px 10px -9px rgba(0, 0, 0, 0.59);
 }
 
 .search-form {

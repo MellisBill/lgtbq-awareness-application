@@ -22,3 +22,30 @@ export type Error = {
     errorMessage: string,
     errorType: string,
 }
+
+export type FormAPIResponseItem = {
+        [key:string]: {
+            questionId: string,
+            textAnswers: {
+                answers: {
+                    [key: number]: {
+                        value: string
+                    }
+                }
+            }
+        }
+    }
+
+
+export type FormAPIResponseList = [
+    answers: {
+        [key:string]: {
+            questionId: string,
+            textAnswers: {
+                answers: [
+                    value: string
+                ]
+            }
+        }
+    }
+] 

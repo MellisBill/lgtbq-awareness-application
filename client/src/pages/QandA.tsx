@@ -1,54 +1,24 @@
-import React, { useEffect, useState }  from 'react'
-import { useGoogleLogin } from '@react-oauth/google';
-import { scopes } from '../config/google-oauth';
+import React, { useState }  from 'react'
+
 import { PageHeading } from '../components/PageHeading';
 import { EmbeddedForm } from '../components/EmbeddedForm';
-import { QuestionResponse } from '../components/QuestionResponse';
+import { QuestionAnswer } from '../components/QuestionAnswer';
 import { formConfig } from '../config/google-forms';
-import { getFormResponses } from '../lib/google-forms';
-import { errorCodes } from '../data/error-codes';
 import { ErrorBanner } from '../components/ErrorBanner';
-import { Error } from '../types/types';
+import { FormAPIResponseItem } from '../types/types';
+import { useCustomGoogleLogin } from '../hooks/useCustomGoogleLogin';
+import { useFormResponses } from '../hooks/useFormResponses';
 
 export const QandA = () => {
 
     const [formVisible, setFormVisible] = useState<boolean>(false);
-    const [responses, setResponses] = useState([]);
-    const [showError, setShowError] = useState<boolean>(true);
-    const [error, setError] = useState<Error>({errorMessage: "", errorType: ""});
-
-    // Fetch questions and answers from Google Forms API;
-    useEffect(() => {
-        getFormResponses(formConfig.responseForm.id)
-            .then(res => {
-                if (res.error) {
-                    setError(errorCodes[res.error]);
-                    setShowError(true);
-                    setResponses([]);
-                } else {
-                    setError({errorMessage: "", errorType: ""})
-                    setShowError(false);
-                    const data = res.body.responses.map((response: any) => response.answers);
-                    setResponses(data);
-                }
-            })
-    }, []);
-
-    // Function to log in to Google 
-    const login = useGoogleLogin({
-        onSuccess: (res) => {
-            localStorage.setItem('oauth-token', res.access_token);
-        },
-        onError: (error) => {
-            console.error('Login Failed: ', error);
-            localStorage.removeItem('oauth-token');
-        },
-        scope: scopes
-    });
+    const [token, setToken] = useState<string>("");
+    const login = useCustomGoogleLogin(setToken);
+    const [responseItems, error] = useFormResponses(formConfig.responseForm.id, token);
 
     return <>
         <PageHeading title='Question and Answer'/>
-        { showError && <ErrorBanner error={error}/> }
+        <ErrorBanner error={error}/>
         <div>
             <button onClick={() => login()}>Login</button>
             { formVisible ? 
@@ -58,9 +28,11 @@ export const QandA = () => {
             }
 
         </div>
-        { formVisible && <EmbeddedForm title='Question form' url={formConfig.responseForm.embedUrl} /> }
-        { responses.map(((response, i) => {
-            return <QuestionResponse key={i} response={response}/>
+        <h2>Answers</h2>
+        { formVisible && <EmbeddedForm title='Question form' url={formConfig.questionForm.embedUrl} /> }
+        { responseItems.map(((responseItem: FormAPIResponseItem, i: number) => {
+            return <QuestionAnswer key={i} responseItem={responseItem}/>
         }))}
+        { responseItems.length === 0 && <p>No items to display</p> }
     </>
 }
