@@ -13,3 +13,12 @@ export type Definition = {
 export type StringDict = {
     [key:string] : string,
 }
+
+export type ErrorCodeMap = {
+    [key:number]: Error,
+}
+
+export type Error = {
+    errorMessage: string,
+    errorType: string,
+}

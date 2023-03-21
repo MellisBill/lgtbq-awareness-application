@@ -6,21 +6,35 @@ import { EmbeddedForm } from '../components/EmbeddedForm';
 import { QuestionResponse } from '../components/QuestionResponse';
 import { formConfig } from '../config/google-forms';
 import { getFormResponses } from '../lib/google-forms';
+import { errorCodes } from '../data/error-codes';
+import { ErrorBanner } from '../components/ErrorBanner';
+import { Error } from '../types/types';
 
 export const QandA = () => {
 
     const [formVisible, setFormVisible] = useState<boolean>(false);
     const [responses, setResponses] = useState([]);
+    const [showError, setShowError] = useState<boolean>(true);
+    const [error, setError] = useState<Error>({errorMessage: "", errorType: ""});
 
-
+    // Fetch questions and answers from Google Forms API;
     useEffect(() => {
         getFormResponses(formConfig.responseForm.id)
             .then(res => {
-                const data = res.responses.map((response: any) => response.answers);
-                setResponses(data);
+                if (res.error) {
+                    setError(errorCodes[res.error]);
+                    setShowError(true);
+                    setResponses([]);
+                } else {
+                    setError({errorMessage: "", errorType: ""})
+                    setShowError(false);
+                    const data = res.body.responses.map((response: any) => response.answers);
+                    setResponses(data);
+                }
             })
-    }, [])
+    }, []);
 
+    // Function to log in to Google 
     const login = useGoogleLogin({
         onSuccess: (res) => {
             localStorage.setItem('oauth-token', res.access_token);
@@ -34,6 +48,7 @@ export const QandA = () => {
 
     return <>
         <PageHeading title='Question and Answer'/>
+        { showError && <ErrorBanner error={error}/> }
         <div>
             <button onClick={() => login()}>Login</button>
             { formVisible ? 
