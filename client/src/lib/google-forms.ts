@@ -1,8 +1,6 @@
 // Function to make API request to Google forms API response list endpoint
 // param formId: ID of form
-// returns {error, body}
-//    error: HTTP error code (if applicable)
-//    body: response body from API call
+// returns {error, body} - see handleResponse()
 export const getFormResponses = async (formId: string) => {
     return await handleResponse(
       await fetch(

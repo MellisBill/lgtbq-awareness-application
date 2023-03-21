@@ -1,4 +1,6 @@
-export const formConfig = {
+import { FormConfig } from "../types/types";
+
+export const formConfig: FormConfig = {
     questionForm: {
         id: "1a0rW4VL6TOXfvSgcvxS3V2FPEQ8hN2ROyG8HfFHH1Rs",
         embedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdHnE6yzKKiVVbdjLo7FpaTW5i-lMe9GmjTOkOip9m8-ehk9w/viewform?embedded=true",

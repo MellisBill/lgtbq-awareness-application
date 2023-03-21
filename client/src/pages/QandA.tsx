@@ -27,11 +27,11 @@ export const QandA = () => {
             }
 
         </div>
-        <h2>Answers</h2>
         { formVisible && <EmbeddedForm title='Question form' url={formConfig.questionForm.embedUrl} /> }
+        <h2>Answers</h2>
         { responseItems.map(((responseItem: FormAPIResponseItem, i: number) => {
             return <QuestionAnswer key={i} responseItem={responseItem}/>
-        }))}
+        })) }
         { responseItems.length === 0 && <p>No items to display</p> }
     </>
 }

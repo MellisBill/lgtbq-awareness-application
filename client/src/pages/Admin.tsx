@@ -25,13 +25,12 @@ export const Admin = () => {
             :
                 <button onClick={() => setFormVisible(true)}>Answer a question</button>
             }
-
         </div>
         { formVisible && <EmbeddedForm title='Question form' url={formConfig.responseForm.embedUrl} /> }
         <h2>Questions</h2>
         { responseItems.map((responseItem: FormAPIResponseItem, i: number) => {
-          return <Question key={i} responseItem={responseItem} />
-        })}
+            return <Question key={i} responseItem={responseItem} />
+        }) }
         { responseItems.length === 0 && <p>No items to display</p> }
     </>
 }

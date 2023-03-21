@@ -42,10 +42,22 @@ export type FormAPIResponseList = [
         [key:string]: {
             questionId: string,
             textAnswers: {
-                answers: [
-                    value: string
-                ]
+                answers: {
+                    [key: number]: {
+                        value: string
+                    }
+                }
             }
         }
     }
 ] 
+
+export type FormConfig = {
+    [key:string]: {
+        id: string,
+        embedUrl: string,
+        questionIds: {
+            [key: number]: string
+        }
+    }
+}
