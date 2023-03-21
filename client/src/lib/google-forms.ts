@@ -1,3 +1,8 @@
+// Function to make API request to Google forms API response list endpoint
+// param formId: ID of form
+// returns {error, body}
+//    error: HTTP error code (if applicable)
+//    body: response body from API call
 export const getFormResponses = async (formId: string) => {
     return await handleResponse(
       await fetch(
@@ -9,6 +14,11 @@ export const getFormResponses = async (formId: string) => {
   );
 }
 
+// Utility function to format response from API call in the form {error, body}
+// param res: API response
+// returns {error, body}
+//    error: HTTP error code (if applicable)
+//    body: response body from API call
 const handleResponse = async (res: any) => {
   if (res.status < 200 || res.status >= 300) {
     return {

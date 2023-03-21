@@ -15,7 +15,6 @@ export const Admin = () => {
     const login = useCustomGoogleLogin(setToken);
     const [responseItems, error] = useFormResponses(formConfig.questionForm.id, token);
 
-    
     return <>
       <PageHeading title='Admin'/>
       <ErrorBanner error={error}/>
