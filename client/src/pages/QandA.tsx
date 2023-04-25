@@ -31,7 +31,6 @@ export const QandA = () => {
         <h2>Answers</h2>
         { responseItems.map(((responseItem: FormAPIResponseItem, i: number) => {
             return <QuestionAnswer key={i} responseItem={responseItem}/>
-        })) }
         { loading && <p>Loading...</p>}
         { (!loading && responseItems.length === 0) && <p>No items to display</p> }
     </>

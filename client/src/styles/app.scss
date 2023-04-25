@@ -70,19 +70,29 @@ ul {
         }
 
         .ask-question {
+            margin-left: auto;
             width: 150px;
             height: 40px;
-            background: $cgi-gradient;
-            border-radius: 20px;
-            margin-left: auto;
-            outline: none;
-            color: white;
-            font-weight: bold;
-            margin-right: 2rem;
-            border: none;
-            cursor: pointer;
-            box-shadow: 6px 6px 10px -9px rgba(0,0,0,0.59);
+                button {
+                    width: 100%;
+                    height: 100%;
+                    background: $cgi-gradient;
+                    border-radius: 20px;
+                    color: white;
+                    
+                    outline: none;
+                    font-weight: bold;
+                    margin-right: 2rem;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: 6px 6px 10px -9px rgba(0,0,0,0.59);
+                }
         }
+    }
+
+    .button-link {
+        color: white;
+        text-decoration: none;
     }
 
 }
@@ -241,7 +251,74 @@ ul {
 
 .question-response {
     margin-bottom: 1rem;
-}
+    width: 50%;
+    background-color: #d1d1d18a;
+    padding: 1%;
+    margin: 3%;
+    margin-bottom: 0%;
+    border-radius: 5px;
+  }
+  
+  .question-response-tags {
+    width: fit-content;
+    background-color: #5236AB;
+    border-radius: 5px;
+    margin-top: 10rem;
+    margin-right: 0.3rem;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    display:inline;
+  }
+  
+  .question-response-question {
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    display: inline-block;
+    line-height:0px;
+    position: relative;
+    top: -14px;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    padding-right:1rem;
+  }
+  
+  .question-response-asker {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    line-height:0px;
+    position: relative;
+    top: -14px;
+    margin-left:2rem;
+  }
+  
+  .question-response-asker-container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: fit-content;
+    height: 1.75rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .question-response-answer {
+    margin-bottom: 1rem;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 3%;
+    margin: 3%;
+    margin-bottom: 0%;
+    border-radius: 5px;
+  }
 
 // error banner
 
@@ -252,8 +329,8 @@ ul {
 }
 
 .info {
-    background: lighten($info-blue, 40%);
-    border: solid 3px $info-blue
+    background: lighten($info-blue, 49%);
+    border: solid 3px lighten($info-blue, 15%);
 }
 
 .error {

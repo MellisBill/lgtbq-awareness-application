@@ -12,3 +12,8 @@ export const extractAnswer = (responseItem: FormAPIResponseItem, questionId: str
         return ""
     }
 }
+
+export const extractTags = (input: string) : string[] | [] => {
+    input = input.replace(/\s/g, '');
+    return input.split(';');
+}

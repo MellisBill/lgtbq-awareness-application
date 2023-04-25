@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
 import { errorCodes } from "../data/error-codes";
 import { getFormResponses } from "../lib/google-forms";
-import { Error, FormAPIResponseList } from "../types/types";
+import { Error, FormAPIResponseItem, FormAPIResponseList } from "../types/types";
 
 // Hook to make an API request to Google Forms API response-list endpoint
 // param formId: ID of form
 // param token: google auth token
-// returns [responseItems, error]
+// returns [responseItems, error, loading]
 //      responseItems: List of form response items from API
 //      error: object containing error description and type to display in error banner
+//      loading: boolean value that represents if the API call is still being processed
 export const useFormResponses = (formId: string, token: string) : [FormAPIResponseList | [], Error, boolean] => {
 
     const [responseItems, setResponses] = useState<FormAPIResponseList | []>([]);
