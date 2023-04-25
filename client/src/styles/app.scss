@@ -408,7 +408,7 @@ ul {
 
             &:hover {
                 cursor: pointer;
-                transform: scale(1.01);
+                transform: scale(1.05);
                 transition: all 0.2s ease-in-out;
             }
         }
@@ -436,16 +436,16 @@ ul {
     .content {
         order: 1;
         h2 {
-            left: 25rem;
+            left: 26rem;
         }
     
         p {
             top: 8rem;
-            left: 30rem;
+            left: 31rem;
         }
 
         button {
-            left: 40rem;
+            left: 41rem;
         }
     }
 
