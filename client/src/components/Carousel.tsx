@@ -2,7 +2,7 @@ import React, { ReactElement, Children, useState, useRef, useMemo, useEffect } f
 import { CarouselProps } from '../types/types'
 
 const defaultProps: CarouselProps = {
-    height: '20rem',
+    height: '30rem',
     children: null,
     auto: false,
     interval: 0,
@@ -47,7 +47,7 @@ export const Carousel = ({height, children, auto, interval}: CarouselProps) => {
         if (containerRef.current == null) {
             return {};
         }
-        const offset = (containerRef.current?.offsetWidth - 1) * index;
+        const offset = (containerRef.current?.offsetWidth) * index;
         return {
                 transform: `translateX(-${offset}px)`
             }
