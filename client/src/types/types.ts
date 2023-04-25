@@ -33,3 +33,9 @@ export type InfoSlideProps = {
     to: string,
     children: any,
 }
+
+export type ExtLink = {
+    title: string, 
+    url: string, 
+    description: string,
+}
