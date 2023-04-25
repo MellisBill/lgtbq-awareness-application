@@ -9,7 +9,7 @@ export const Home = () => {
   return (
     <>
       <PageHeading title="Home" />
-      <Carousel>
+      <Carousel auto={true} interval={5000}>
         {pageData.map((page, i) => {
           return (
             <CarouselItem key={i}>

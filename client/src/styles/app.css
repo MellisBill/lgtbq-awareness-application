@@ -429,7 +429,7 @@ ul li {
 }
 .info-slide .content button:hover {
   cursor: pointer;
-  transform: scale(1.01);
+  transform: scale(1.05);
   transition: all 0.2s ease-in-out;
 }
 .info-slide .cornerstone {
@@ -453,14 +453,14 @@ ul li {
   order: 1;
 }
 .info-slide-right .content h2 {
-  left: 25rem;
+  left: 26rem;
 }
 .info-slide-right .content p {
   top: 8rem;
-  left: 30rem;
+  left: 31rem;
 }
 .info-slide-right .content button {
-  left: 40rem;
+  left: 41rem;
 }
 .info-slide-right .cornerstone {
   background-image: url("../assets/images/lgbt-cornersotne.png");

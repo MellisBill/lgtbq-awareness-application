@@ -31,7 +31,7 @@ export const Admin = () => {
         { responseItems.map((responseItem: FormAPIResponseItem, i: number) => {
             return <Question key={i} responseItem={responseItem} />
         }) }
-        { (responseItems.length === 0 && !loading) && <p>No items to display</p> }
-        { loading && <p>Loading...</p> }
+        { loading && <p>Loading...</p>}
+        { (!loading && responseItems.length) === 0 && <p>No items to display</p> }
     </>
 }
