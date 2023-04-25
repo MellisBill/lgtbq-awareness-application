@@ -17,9 +17,11 @@ export const Nav = () => {
               </li>)
           })}
         </ul>
-          <button className='ask-question'>
-            <Link style={{color: 'white', textDecoration: 'none'}} to='/question-and-answer'>Ask a question</Link>
-          </button>
+          
+        <Link className='ask-question' to='/question-and-answer'>
+          <button className='ask-question'>Ask a question</button>
+        </Link>
+          
       </div>
        
     </nav>

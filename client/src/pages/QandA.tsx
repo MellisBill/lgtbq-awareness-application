@@ -13,7 +13,7 @@ export const QandA = () => {
     const [formVisible, setFormVisible] = useState<boolean>(false);
     const [token, setToken] = useState<string>("");
     const login = useCustomGoogleLogin(setToken);
-    const [responseItems, error] = useFormResponses(formConfig.responseForm.id, token);
+    const [responseItems, error, loading] = useFormResponses(formConfig.responseForm.id, token);
 
     return <>
         <PageHeading title='Question and Answer'/>
@@ -32,6 +32,7 @@ export const QandA = () => {
         { responseItems.map(((responseItem: FormAPIResponseItem, i: number) => {
             return <QuestionAnswer key={i} responseItem={responseItem}/>
         })) }
-        { responseItems.length === 0 && <p>No items to display</p> }
+        { (responseItems.length === 0 && !loading) && <p>No items to display</p> }
+        { loading && <p>Loading...</p> }
     </>
 }
