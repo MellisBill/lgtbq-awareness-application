@@ -239,7 +239,6 @@ ul {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: baseline;
     white-space: nowrap;
     position: relative;
@@ -334,4 +333,97 @@ ul {
     color: white;
     font-size: 2rem;
     background: blue;
+}
+
+// info slide
+
+.info-slide {
+    position: relative;
+    width: 80%;
+    display: flex;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        h2 {
+            display: inline;
+            top: 0;
+            color: #8f8f8f;
+            font-size: 3rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            width: 30rem;
+            margin-left: 8rem;
+            margin-top: 4rem;
+            color: #4c4c4c;
+        }
+    }
+
+   
+    .cornerstone {
+        background-size: contain;
+        position: absolute;
+        width: 8rem;
+        height: 8rem;
+        top: 2rem;
+    }
+
+    .slide-image {
+        width: 30%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top left;
+    }
+}
+
+.info-slide-right {
+    .content {
+        order: 1;
+        h2 {
+            margin-left: 2rem;
+        }
+    
+        p {
+            margin-left: 8rem;
+            margin-top: 4rem;
+        }
+    }
+
+    .cornerstone {
+        background-image: url('../resources/images/lgbt-cornersotne.png');
+        right: 2rem;
+    }
+
+    .slide-image {
+        order: 0;
+    }
+}
+
+.info-slide-left {
+    .content {
+        order: 0;
+        margin-left: 10rem;
+        h2 {
+            margin-left: 2rem;
+        }
+    
+        p {
+            margin-left: 8rem;
+            margin-top: 4rem;
+        }
+    }
+
+    .cornerstone {
+        left: 2rem;
+        background-image: url('../resources/images/lgbt-cornersotne\ -left.png');
+    }
+
+    .slide-image {
+        order: 1;
+        margin-left: auto;
+    }
 }

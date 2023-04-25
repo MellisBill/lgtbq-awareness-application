@@ -25,3 +25,10 @@ export type CarouselItemProps = {
     height?: string,
     children?: any,
 };
+
+export type InfoSlideProps = {
+    imageSrc: string,
+    title: string,
+    alignment: string,
+    children: any,
+}
