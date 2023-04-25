@@ -240,6 +240,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: baseline;
+    justify-content: center;
     white-space: nowrap;
     position: relative;
 
@@ -253,6 +254,7 @@ ul {
     .carousel-item {
         width: 100%;
         display: inline-flex;
+        justify-content: center;
     }
 }
 
@@ -353,11 +355,12 @@ ul {
             color: #8f8f8f;
             font-size: 3rem;
             margin-top: 2rem;
+            position: absolute;
         }
 
         p {
             width: 30rem;
-            margin-left: 8rem;
+            position: absolute;
             margin-top: 4rem;
             color: #4c4c4c;
         }
@@ -376,7 +379,8 @@ ul {
         width: 30%;
         height: 100%;
         object-fit: cover;
-        object-position: top left;
+        object-position: center;
+        position: absolute;
     }
 }
 
@@ -384,22 +388,22 @@ ul {
     .content {
         order: 1;
         h2 {
-            margin-left: 2rem;
+            left: 25rem;
         }
     
         p {
-            margin-left: 8rem;
-            margin-top: 4rem;
+            top: 8rem;
+            left: 30rem;
         }
     }
 
     .cornerstone {
-        background-image: url('../resources/images/lgbt-cornersotne.png');
+        background-image: url('../assets/images/lgbt-cornersotne.png');
         right: 2rem;
     }
 
     .slide-image {
-        order: 0;
+        left: 0;
     }
 }
 
@@ -408,22 +412,22 @@ ul {
         order: 0;
         margin-left: 10rem;
         h2 {
-            margin-left: 2rem;
+            position: absolute;
+            left: 13rem;
         }
     
         p {
-            margin-left: 8rem;
-            margin-top: 4rem;
+            top: 8rem;
+            left: 16rem;
         }
     }
 
     .cornerstone {
         left: 2rem;
-        background-image: url('../resources/images/lgbt-cornersotne\ -left.png');
+        background-image: url('../assets/images/lgbt-cornersotne\ -left.png');
     }
 
     .slide-image {
-        order: 1;
-        margin-left: auto;
+        right: 0;
     }
 }

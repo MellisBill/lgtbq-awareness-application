@@ -201,8 +201,8 @@ ul li {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: baseline;
+  justify-content: center;
   white-space: nowrap;
   position: relative;
 }
@@ -297,11 +297,77 @@ ul li {
 .info-slide {
   position: relative;
   width: 80%;
+  display: flex;
+}
+.info-slide .content {
+  display: flex;
+  flex-direction: column;
+}
+.info-slide .content h2 {
+  display: inline;
+  top: 0;
+  color: #8f8f8f;
+  font-size: 3rem;
+  margin-top: 2rem;
+  position: absolute;
+}
+.info-slide .content p {
+  width: 30rem;
+  position: absolute;
+  margin-top: 4rem;
+  color: #4c4c4c;
 }
 .info-slide .cornerstone {
+  background-size: contain;
   position: absolute;
-  top: 2rem;
-  right: 2rem;
   width: 8rem;
   height: 8rem;
+  top: 2rem;
+}
+.info-slide .slide-image {
+  width: 30%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+}
+
+.info-slide-right .content {
+  order: 1;
+}
+.info-slide-right .content h2 {
+  left: 25rem;
+}
+.info-slide-right .content p {
+  top: 8rem;
+  left: 30rem;
+}
+.info-slide-right .cornerstone {
+  background-image: url("../assets/images/lgbt-cornersotne.png");
+  right: 2rem;
+}
+.info-slide-right .slide-image {
+  left: 0;
+}
+
+.info-slide-left .content {
+  order: 0;
+  margin-left: 10rem;
+}
+.info-slide-left .content h2 {
+  position: absolute;
+  left: 13rem;
+}
+.info-slide-left .content p {
+  top: 8rem;
+  left: 16rem;
+}
+.info-slide-left .cornerstone {
+  left: 2rem;
+  background-image: url("../assets/images/lgbt-cornersotne -left.png");
+}
+.info-slide-left .slide-image {
+  right: 0;
 }/*# sourceMappingURL=app.css.map */
