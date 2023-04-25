@@ -18,7 +18,7 @@ export const Nav = () => {
           })}
         </ul>
           <button className='ask-question'>
-          Ask a question
+            Ask a question
           </button>
       </div>
        

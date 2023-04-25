@@ -30,5 +30,6 @@ export type InfoSlideProps = {
     imageSrc: string,
     title: string,
     alignment: string,
+    to: string,
     children: any,
 }
