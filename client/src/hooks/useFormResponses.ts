@@ -9,14 +9,17 @@ import { Error, FormAPIResponseList } from "../types/types";
 // returns [responseItems, error]
 //      responseItems: List of form response items from API
 //      error: object containing error description and type to display in error banner
-export const useFormResponses = (formId: string, token: string) : [any, Error] => {
+export const useFormResponses = (formId: string, token: string) : [FormAPIResponseList | [], Error, boolean] => {
 
     const [responseItems, setResponses] = useState<FormAPIResponseList | []>([]);
     const [error, setError] = useState<Error>({errorMessage: "", errorType: ""});
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
+        setLoading(true);
         getFormResponses(formId)
             .then(res => {
+                setLoading(false);
                 if (res.error) {
                     setError(errorCodes[res.error]);
                     setResponses([]);
@@ -28,5 +31,5 @@ export const useFormResponses = (formId: string, token: string) : [any, Error] =
             })
     }, [formId, token]);
 
-    return [responseItems, error];
+    return [responseItems, error, loading];
 }

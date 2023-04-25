@@ -13,7 +13,7 @@ export const Admin = () => {
     const [formVisible, setFormVisible] = useState<boolean>(false);
     const [token, setToken] = useState("");
     const login = useCustomGoogleLogin(setToken);
-    const [responseItems, error] = useFormResponses(formConfig.questionForm.id, token);
+    const [responseItems, error, loading] = useFormResponses(formConfig.questionForm.id, token);
 
     return <>
       <PageHeading title='Admin'/>
@@ -31,6 +31,7 @@ export const Admin = () => {
         { responseItems.map((responseItem: FormAPIResponseItem, i: number) => {
             return <Question key={i} responseItem={responseItem} />
         }) }
-        { responseItems.length === 0 && <p>No items to display</p> }
+        { loading && <p>Loading...</p>}
+        { (!loading && responseItems.length) === 0 && <p>No items to display</p> }
     </>
 }
