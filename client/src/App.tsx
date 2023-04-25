@@ -1,3 +1,4 @@
+import React, {useEffect, useState} from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Links } from './pages/Links'
@@ -6,9 +7,10 @@ import { Nav } from './components/Nav';
 import { Glossary } from './pages/Glossary'
 import { Modal } from './components/Modal'
 import { FormAcceptModal } from './components/FormAcceptModal';
-import React, {useEffect, useState} from 'react'
-import './styles/app.css'
 import { userTerms } from './data/user-terms';
+import { QandA } from './pages/QandA';
+import { Admin } from './pages/Admin';
+import './styles/app.css'
 
 function App() {
 
@@ -28,9 +30,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/links" element={<Links />} />
-        <Route path="/links" element={<Links />} />
+        <Route path='/question-and-answer' element={<QandA/>} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/glossary" element={<Glossary />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </div>
 

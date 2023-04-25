@@ -60,6 +60,9 @@ ul li {
   color: white;
   font-weight: bold;
   margin-right: 2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 6px 6px 10px -9px rgba(0, 0, 0, 0.59);
 }
 
 .search-form {
@@ -196,6 +199,25 @@ ul li {
   font-weight: 300;
   font-size: 2rem;
 }
+
+.question-response {
+  margin-bottom: 1rem;
+}
+
+.error-banner {
+  padding: 1rem;
+  color: #5c5c5c;
+  font-size: 0.9rem;
+}
+
+.info {
+  background: #a7d7ff;
+  border: solid 3px #0078da;
+}
+
+.error {
+  background: #f7b7c1;
+  border: solid 3px rgb(227, 25, 55);
 
 .carousel-container {
   overflow: hidden;

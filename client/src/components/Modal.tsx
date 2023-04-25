@@ -1,9 +1,8 @@
-import React, { ReactElement, ReactNode } from 'react'
+import React, { ReactElement } from 'react'
 import ReactDom from 'react-dom'
-import { useState, useEffect } from 'react';
-import { FormAcceptModal } from './FormAcceptModal';
+import { useState } from 'react';
 
-export const Modal = ({children, storageKey}: any) => {
+export const Modal = ({children}: any) => {
 
     // state reflecting if modal is visible or not
     const [open, setOpen] = useState(true);

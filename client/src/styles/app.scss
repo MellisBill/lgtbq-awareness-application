@@ -11,6 +11,7 @@ $cgi-gradient: linear-gradient(90deg,
         rgba(82, 54, 171, 1) 100%);
 
 $cgi-red: rgba(227, 25, 55, 1);
+$info-blue: #0078da;
 
 $breakpoint: 768px;
 
@@ -78,6 +79,9 @@ ul {
             color: white;
             font-weight: bold;
             margin-right: 2rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 6px 6px 10px -9px rgba(0,0,0,0.59);
         }
     }
 
@@ -232,6 +236,29 @@ ul {
         font-size: 2rem;
     }
 }
+
+// Question response
+
+.question-response {
+    margin-bottom: 1rem;
+}
+
+// error banner
+
+.error-banner {
+    padding: 1rem;
+    color: #5c5c5c;
+    font-size: .9rem;
+}
+
+.info {
+    background: lighten($info-blue, 40%);
+    border: solid 3px $info-blue
+}
+
+.error {
+    background: lighten($cgi-red, 35%);
+    border: solid 3px $cgi-red;
 
 // Carousel
 
