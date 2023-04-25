@@ -364,6 +364,26 @@ ul {
             margin-top: 4rem;
             color: #4c4c4c;
         }
+
+        button {
+            position: absolute;
+            bottom: 5rem;
+            width: 150px;
+            height: 40px;
+            background: $cgi-gradient;
+            border-radius: 20px;
+            margin-left: auto;
+            outline: none;
+            color: white;
+            font-weight: bold;
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.01);
+                transition: all 0.2s ease-in-out;
+            }
+        }
     }
 
    
@@ -395,6 +415,10 @@ ul {
             top: 8rem;
             left: 30rem;
         }
+
+        button {
+            left: 40rem;
+        }
     }
 
     .cornerstone {
@@ -419,6 +443,10 @@ ul {
         p {
             top: 8rem;
             left: 16rem;
+        }
+
+        button {
+            left: 26rem;
         }
     }
 

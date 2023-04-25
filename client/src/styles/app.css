@@ -317,6 +317,24 @@ ul li {
   margin-top: 4rem;
   color: #4c4c4c;
 }
+.info-slide .content button {
+  position: absolute;
+  bottom: 5rem;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(90deg, rgb(227, 25, 55) 0%, rgb(168, 36, 101) 60%, rgb(82, 54, 171) 100%);
+  border-radius: 20px;
+  margin-left: auto;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+.info-slide .content button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+}
 .info-slide .cornerstone {
   background-size: contain;
   position: absolute;
@@ -344,6 +362,9 @@ ul li {
   top: 8rem;
   left: 30rem;
 }
+.info-slide-right .content button {
+  left: 40rem;
+}
 .info-slide-right .cornerstone {
   background-image: url("../assets/images/lgbt-cornersotne.png");
   right: 2rem;
@@ -363,6 +384,9 @@ ul li {
 .info-slide-left .content p {
   top: 8rem;
   left: 16rem;
+}
+.info-slide-left .content button {
+  left: 26rem;
 }
 .info-slide-left .cornerstone {
   left: 2rem;

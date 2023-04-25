@@ -12,8 +12,8 @@ export const Home = () => {
       <Carousel>
         {pageData.map((page, i) => {
           return (
-            <CarouselItem>
-              <InfoSlide title={page.title} imageSrc={page.imageSrc} alignment={i % 2 == 0 ? 'left' : 'right'}>
+            <CarouselItem key={i}>
+              <InfoSlide title={page.title} imageSrc={page.imageSrc} alignment={i % 2 == 0 ? 'left' : 'right'} to={page.to}>
                 <p>{page.content}</p>
               </InfoSlide>
             </CarouselItem>
