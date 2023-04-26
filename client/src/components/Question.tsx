@@ -5,9 +5,9 @@ import { FormAPIResponseItem } from '../types/types'
 
 export const Question = ({responseItem}: {responseItem: FormAPIResponseItem}) => {
 
-    const _question = extractAnswer(responseItem, formConfig.questionForm.questionIds[0])
+    const question = extractAnswer(responseItem, formConfig.questionForm.questionIds[0])
 
-    return <>
-        <p>Question: {_question}</p>
-    </>
+    return <div className='question'>
+        <p>{question}</p>
+    </div>
 }
